@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        <label for="html_content">Paste your HTML content:</label>
+        <textarea id="html_content" name="html_content" rows="15" cols="80"></textarea>
+        <button type="submit">Validate Heading Hierarchy</button>
+    </form>
+{% endblock %}

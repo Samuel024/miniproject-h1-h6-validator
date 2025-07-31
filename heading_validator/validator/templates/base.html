@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    font-family: monospace;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.success {
+    color: #4CAF50;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #e8f5e9;
+    border: 1px solid #c8e6c9;
+}
+
+.errors {
+    color: #d32f2f;
+    padding: 10px;
+    background-color: #ffebee;
+    border: 1px solid #ffcdd2;
+}
+
+.heading-structure div {
+    margin: 5px 0;
+    padding: 5px;
+}
+
+.heading-tag {
+    font-weight: bold;
+    color: #0d47a1;
+}
+
+.heading-level-1 { font-size: 1.5em; margin-left: 0; }
+.heading-level-2 { font-size: 1.3em; margin-left: 20px; }
+.heading-level-3 { font-size: 1.1em; margin-left: 40px; }
+.heading-level-4 { margin-left: 60px; }
+.heading-level-5 { margin-left: 80px; }
+.heading-level-6 { margin-left: 100px; }
+
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    background-color: #2196F3;
+    color: white;
+    padding: 10px 15px;
+}
+</style>
+    <title>Heading Hierarchy Validator</title>
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Heading Hierarchy Validator</h1>
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

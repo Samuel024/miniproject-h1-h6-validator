@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="results">
+        {% if is_valid %}
+            <div class="success">✅ Valid heading hierarchy!</div>
+        {% else %}
+            <div class="errors">
+                <h2>Validation Issues Found:</h2>
+                <ul>
+                    {% for error in errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+        
+        <h2>Heading Structure:</h2>
+        <div class="heading-structure">
+            {% for heading in headings %}
+                <div class="heading-level-{{ heading.level }}">
+                    <span class="heading-tag">h{{ heading.level }}</span>: {{ heading.text }}
+                </div>
+            {% empty %}
+                <p>No headings found in the provided HTML.</p>
+            {% endfor %}
+        </div>
+        
+        <a href="{% url 'index' %}" class="back-button">Validate Another Document</a>
+    </div>
+{% endblock %}
